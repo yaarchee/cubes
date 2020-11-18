@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div class="loader-wrapper">
+      <div class="loader">Loading...</div>
+    </div>
+
+    <div class="container">
+      <header class="header row">
+        <div class="col-8 row align-items-center">
+          <div class="col-5">
+            <div class="buttons-wrap">
+              <button type="button" class="start btn btn-primary" id="start" disabled> пауза </button>
+              <button type="button" class="new-game btn btn-primary" id="newGame"> новая игра</button>
+            </div>
+
+
+          </div>
+          <div class="col-7">
+            <div class="current-result d-flex justify-content-around">
+               <p class="timer current-result__info">60</p>
+               <p class="enemy current-result__info">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 row align-items-center justify-content-end">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModals">
+            Как играть?
+          </button>
+        </div>
+
+
+
+      </header>
+      <div class="row">
+        <div class="col-8">
+          <div class="wrap">
+
+          </div>
+        </div>
+        <div class="col-4">
+          <h2 class="table-results">
+            Таблица рзультатов
+          </h2>
+          <div class="head-results">
+            <p>Ранг</p>
+            <p>Имя</p>
+            <p>Очки</p>
+          </div>
+          <ul class="top-players">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade modals" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Сохранить результат?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form class="form">
+            <div class="form-group">
+              <p class="your-result">
+                Ваш результат: <span class="your-result__score"></span> очко(в)
+              </p>
+              <label for="name">Введите имя</label>
+              <input type="text" class="form-control" id="name" required>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary" >Сохранить</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    <!-- Button trigger modal -->
+
+
+
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabels">Как играть?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>
+                При клике на кубик, он пропадает и случайным образом появляется другой
+              </li>
+              <li>
+                Не зависимо от того, был ли клик по кубику, новые будут появляться случайным образом от 0 до 2х
+              </li>
+              <li>
+                Кубики большого и среднего размера добавляют "1" очко, но при этом, отнимают "1" секунду
+              </li>
+              <li>
+                Кубики маленького размера добавляют "3" очка, и при этом добавляют "1" секунду (не больше 60 секунд)
+              </li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закыть</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
